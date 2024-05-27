@@ -1,0 +1,24 @@
+<div class="item-slider-container">
+  <div class="item-slider">
+    <div (click)="slide(-300)" class="left-arrow-left">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </div>
+    <div #scrl (scroll)="scrollCheck()" class="item-container">
+      <div *ngFor="let card of duplicatedCards">
+        <div
+          class="card text-white justify-content-center"
+          style="width: 300px"
+        >
+          <img class="card-img" src="{{ card.img }}" alt="Card image" />
+          <div class="card-img-overlay text-center">
+            <h5 class="card-title fs-1">{{ card.title }}</h5>
+            <button>SHOP NOW</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div (click)="slide(300)" class="right-arrow-right">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </div>
+  </div>
+</div>

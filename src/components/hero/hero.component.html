@@ -1,0 +1,35 @@
+<ngb-carousel
+  #carousel
+  [interval]="2500"
+  [pauseOnHover]="pauseOnHover"
+  [pauseOnFocus]="pauseOnFocus"
+  (slide)="onSlide($event)"
+>
+  <ng-template ngbSlide>
+    <div>
+      <img
+        src="/assets/hero-carousel-01.jpg"
+        style="width: 100%"
+        alt="night ready"
+      />
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img
+        src="/assets/hero-carousel-02.jpg"
+        style="width: 100%"
+        alt="city ready"
+      />
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <div>
+      <img
+        src="/assets/hero-carousel-03.jpg"
+        style="width: 100%"
+        alt="club ready"
+      />
+    </div>
+  </ng-template>
+</ngb-carousel>

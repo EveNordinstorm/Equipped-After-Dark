@@ -1,0 +1,207 @@
+<header
+  class="bg-black d-flex flex-row align-items-center justify-content-between ps-5 pe-5"
+>
+  <div class="my-2">
+    <a class="navbar-brand" href="/">
+      <img
+        src="/assets/EAD Logo text white crop.png"
+        alt="logo"
+        width="200"
+        height="auto"
+        routerLink="/"
+      />
+    </a>
+  </div>
+
+  <ul ngbNav #nav="ngbNav" [activeId]="2" class="justify-content-center">
+    <li [ngbNavItem]="1">
+      <button ngbNavLink class="green__link fw-bold fs-5">NEW</button>
+    </li>
+
+    <li ngbDropdown class="nav-item">
+      <button
+        type="button"
+        class="green__link nav-link fw-bold fs-5"
+        ngbDropdownToggle
+      >
+        WOMEN
+      </button>
+      <div ngbDropdownMenu class="bg-black rounded-0 flex">
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            NEW IN
+          </h6>
+          <button ngbDropdownItem class="dropdown__link mb-3">
+            The Latest Collection
+          </button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            CLOTHING
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Tops</button>
+          <button ngbDropdownItem class="dropdown__link">Trousers</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            SHOES
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Trainers</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            ACCESSORIES
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Bags</button>
+          <button ngbDropdownItem class="dropdown__link">Jewellery</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">
+            Sunglasses
+          </button>
+        </div>
+      </div>
+    </li>
+
+    <li ngbDropdown class="nav-item">
+      <button
+        type="button"
+        class="green__link nav-link fw-bold fs-5"
+        ngbDropdownToggle
+        href="#"
+      >
+        MEN
+      </button>
+      <div ngbDropdownMenu class="bg-black rounded-0 flex">
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            NEW IN
+          </h6>
+          <button ngbDropdownItem class="dropdown__link mb-3">
+            The Latest Collection
+          </button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            CLOTHING
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Tops</button>
+          <button ngbDropdownItem class="dropdown__link">Trousers</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            SHOES
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Trainers</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
+        </div>
+
+        <div>
+          <h6 class="text-decoration-underline text-white fw-bold ms-3">
+            ACCESSORIES
+          </h6>
+          <button ngbDropdownItem class="dropdown__link">Bags</button>
+          <button ngbDropdownItem class="dropdown__link">Jewellery</button>
+          <button ngbDropdownItem class="mb-3 dropdown__link">
+            Sunglasses
+          </button>
+        </div>
+      </div>
+    </li>
+
+    <li [ngbNavItem]="4">
+      <button ngbNavLink class="green__link fw-bold fs-5">BE INSPIRED</button>
+    </li>
+    <li [ngbNavItem]="5">
+      <button ngbNavLink class="orange__link fw-bold fs-5">DEVELOPERS</button>
+    </li>
+  </ul>
+
+  <div>
+    <svg
+      href="#"
+      style="width: 30px; height: auto"
+      class="text-white mx-2"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 41.15 42.63"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m18.57,0c.49.08.99.15,1.48.25,5.87,1.1,10.24,4.3,12.71,9.72,2.92,6.4,2.06,12.49-2.21,18.09-.05.07-.1.13-.18.23.22.24.45.47.68.71,3.13,3.25,6.25,6.5,9.38,9.75.64.67.88,1.45.6,2.33-.26.83-.85,1.35-1.71,1.52-.85.17-1.55-.13-2.13-.75-2.02-2.1-4.04-4.2-6.06-6.3-1.35-1.4-2.69-2.8-4.03-4.18-.86.48-1.68.99-2.55,1.41-8.84,4.26-19.69.01-23.32-9.12C-2.12,15.17,1.55,5.68,9.73,1.71c1.83-.89,3.77-1.43,5.8-1.63.07,0,.14-.05.21-.08.94,0,1.89,0,2.83,0Zm-1.38,29.94c6.99.02,12.68-5.65,12.73-12.68.04-7.01-5.65-12.74-12.68-12.76-7.02-.02-12.73,5.67-12.75,12.7-.02,7.02,5.67,12.73,12.7,12.75Z"
+      ></path>
+    </svg>
+
+    <svg
+      href="#"
+      style="width: 30px; height: auto"
+      class="text-white mx-2"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 328.68 367.91"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m148.55,367.91c-3.67-.66-7.32-1.48-11.02-1.97-21.65-2.87-42.17-9.41-61.44-19.58-30.82-16.28-55.33-39.45-73.96-68.9-2.64-4.17-2.81-7.96-.63-12.42,14.07-28.83,35.99-49.16,65.93-60.52,7.75-2.94,16.11-4.31,24.24-6.2,4.96-1.15,9.4.39,13.48,3.31,10.91,7.79,22.84,13.42,35.97,16.3,28.9,6.34,55.85,1.67,80.41-15.01,6.06-4.12,12.06-5.44,19.25-4.01,39.79,7.9,68.36,30.27,86.58,66.29,1.92,3.79,1.75,6.98-.56,10.69-18.6,29.92-43.14,53.55-74.26,70.11-20.87,11.1-43.14,17.96-66.69,20.53-2.63.29-5.22.92-7.83,1.39h-29.46Z"
+      />
+      <path
+        class="cls-1"
+        d="m164,191.07c-52.71-.55-95.69-43.87-95.17-95.92C69.36,42.44,112.61-.45,164.76,0c52.65.46,95.62,43.76,95.15,95.9-.47,52.65-43.87,95.72-95.9,95.17Z"
+      ></path>
+    </svg>
+
+    <svg
+      href="#"
+      style="width: 30px; height: auto"
+      class="text-white mx-2"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 409.6 363.83"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m409.6,109.36v27.15c-.47,1.42-1.19,2.82-1.37,4.28-2.89,22.32-11.71,42.29-23.97,60.93-13.91,21.16-30.85,39.81-49.65,56.56-37.38,33.28-75.32,65.94-113.16,98.71-10.9,9.44-22.86,9.02-34.22-.76-33.68-29.03-67.53-57.87-100.85-87.31-23.38-20.65-45.37-42.74-62.36-69.19-11.53-17.95-19.82-37.19-22.58-58.55-.21-1.59-.94-3.12-1.43-4.67,0-9.32,0-18.63,0-27.95.48-1.55,1.2-3.08,1.41-4.67,3.22-24.44,12.13-46.5,28.47-65.09C56.48,8.55,90.23-3.81,130.06,1.27c25.77,3.29,46.65,16.32,64.11,35.11,3.68,3.96,7.02,8.25,10.74,12.65,1.59-2,3.05-3.85,4.51-5.69,8.53-10.71,18.48-19.89,30.06-27.2,23.5-14.82,49.05-19.07,76.23-14.23,20.54,3.66,38.64,12.52,54.04,26.54,19.51,17.76,31.43,39.88,36.75,65.62,1.05,5.09,2.07,10.2,3.1,15.29Z"
+      ></path>
+    </svg>
+
+    <svg
+      href="#"
+      style="width: 30px; height: auto"
+      class="text-white mx-2"
+      aria-hidden="true"
+      fill="currentColor"
+      viewBox="0 0 377.82 367.39"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m0,11.83c.39-.58.89-1.11,1.17-1.74C4.13,3.47,9.34.13,16.47.08c15.47-.12,30.94-.1,46.41-.01,8.41.05,13.81,4.04,16.5,12.02,4.73,14.01,9.4,28.05,14.1,42.08,2.55,7.63,5.67,9.88,13.76,9.88,84.22,0,168.43,0,252.65,0,9.89,0,16.25,4.47,17.72,13.02.48,2.8.09,6.02-.82,8.75-13.82,41.89-27.78,83.74-41.75,125.58-2.88,8.62-8.18,12.27-17.41,12.27-55.52,0-111.04,0-166.56,0-8.58,0-11.35,2.16-13.39,10.37-.84,3.38-1.75,6.74-2.55,10.14-1.48,6.29,1.86,10.9,8.27,11.45,1.24.11,2.49.04,3.74.04,62.01,0,124.02.02,186.03-.03,4.49,0,8.67.59,12.28,3.52,5.04,4.09,7.13,10.98,5.15,17.18-2.05,6.39-7.46,10.67-14.04,11.07-1.12.07-2.24.07-3.37.07-62.63,0-125.27.02-187.9,0-20.91,0-37.31-13.11-41.62-33.21-1.36-6.33-.91-12.63.7-18.88,1.21-4.7,2.24-9.45,3.54-14.12,2.43-8.69,1.89-17.19-.96-25.71-17.2-51.39-34.33-102.8-51.49-154.21-2.33-6.99-5.58-9.3-12.99-9.31-8.23,0-16.47-.09-24.7.02-8.29.11-14.11-3.33-17.04-11.25-.11-.3-.47-.5-.72-.75,0-2.74,0-5.49,0-8.23Z"
+      ></path>
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m121.29,367.39c-1.06-.51-2.07-1.14-3.18-1.5-14.74-4.79-24.34-19.82-22.03-34.53,2.55-16.21,15.26-27.51,31.22-27.75,15.79-.24,29.19,10.84,31.98,26.43,3.05,17.05-8.7,33.83-25.66,36.66-.39.07-.73.46-1.1.69h-11.23Z"
+      ></path>
+      <path
+        clip-rule="evenodd"
+        fill-rule="evenodd"
+        d="m312.96,367.39c-1.06-.51-2.07-1.14-3.18-1.5-14.74-4.79-24.34-19.82-22.03-34.53,2.55-16.21,15.26-27.51,31.22-27.75,15.79-.24,29.19,10.84,31.98,26.43,3.05,17.05-8.7,33.83-25.66,36.66-.39.07-.73.46-1.1.69h-11.23Z"
+      ></path>
+    </svg>
+  </div>
+</header>
+
+<div [ngbNavOutlet]="nav"></div>

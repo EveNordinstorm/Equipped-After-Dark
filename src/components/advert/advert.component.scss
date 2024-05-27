@@ -1,0 +1,12 @@
+$purple: #a61ed3;
+$green: #0df733;
+$orange: #f27a2a;
+
+.advert-img {
+    width: 50%;
+    clip-path: polygon(0 0, 100% 0, 83% 100%, 0% 100%);
+}
+
+.advert-color {
+    background-color: $orange;
+}

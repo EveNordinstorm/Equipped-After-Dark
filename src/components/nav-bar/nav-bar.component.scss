@@ -1,0 +1,32 @@
+$purple: #a61ed3;
+$green: #0df733;
+$orange: #f27a2a;
+
+li button {
+    color: white;
+}
+
+.green__link {
+    &:hover{
+        color: #{$green};
+    }
+}
+
+.orange__link {
+    color: #{$orange} !important;
+    &:hover{
+        color: #{$green} !important;
+    }
+}
+
+.dropdown__link {
+    &:hover{
+        background-color: #{$green};
+        color: #000;
+    }
+}
+
+svg:hover {
+    color: #{$green} !important;
+    cursor: pointer;
+}
