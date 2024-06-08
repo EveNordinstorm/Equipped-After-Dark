@@ -15,7 +15,9 @@
 
   <ul ngbNav #nav="ngbNav" [activeId]="2" class="justify-content-center">
     <li [ngbNavItem]="1">
-      <button ngbNavLink class="green__link fw-bold fs-5">NEW</button>
+      <a href="/new">
+        <button ngbNavLink class="green__link fw-bold fs-5">NEW</button>
+      </a>
     </li>
 
     <li ngbDropdown class="nav-item">
@@ -26,43 +28,48 @@
       >
         WOMEN
       </button>
+
       <div ngbDropdownMenu class="bg-black rounded-0 flex">
         <div>
           <h6 class="text-decoration-underline text-white fw-bold ms-3">
             NEW IN
           </h6>
-          <button ngbDropdownItem class="dropdown__link mb-3">
-            The Latest Collection
-          </button>
+          <a href="/new">
+            <button ngbDropdownItem class="dropdown__link mb-3">
+              The Latest Collection
+            </button>
+          </a>
         </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            CLOTHING
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Tops</button>
-          <button ngbDropdownItem class="dropdown__link">Trousers</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
-        </div>
+        <a href="/products-women">
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              CLOTHING
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Tops</button>
+            <button ngbDropdownItem class="dropdown__link">Trousers</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
+          </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            SHOES
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Trainers</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
-        </div>
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              SHOES
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Trainers</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
+          </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            ACCESSORIES
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Bags</button>
-          <button ngbDropdownItem class="dropdown__link">Jewellery</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">
-            Sunglasses
-          </button>
-        </div>
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              ACCESSORIES
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Bags</button>
+            <button ngbDropdownItem class="dropdown__link">Jewellery</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">
+              Sunglasses
+            </button>
+          </div>
+        </a>
       </div>
     </li>
 
@@ -75,51 +82,60 @@
       >
         MEN
       </button>
+
       <div ngbDropdownMenu class="bg-black rounded-0 flex">
         <div>
           <h6 class="text-decoration-underline text-white fw-bold ms-3">
             NEW IN
           </h6>
-          <button ngbDropdownItem class="dropdown__link mb-3">
-            The Latest Collection
-          </button>
+          <a href="/new">
+            <button ngbDropdownItem class="dropdown__link mb-3">
+              The Latest Collection
+            </button>
+          </a>
         </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            CLOTHING
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Tops</button>
-          <button ngbDropdownItem class="dropdown__link">Trousers</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
-        </div>
+        <a href="/products-men">
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              CLOTHING
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Tops</button>
+            <button ngbDropdownItem class="dropdown__link">Trousers</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">Coats</button>
+          </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            SHOES
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Trainers</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
-        </div>
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              SHOES
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Trainers</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">Boots</button>
+          </div>
 
-        <div>
-          <h6 class="text-decoration-underline text-white fw-bold ms-3">
-            ACCESSORIES
-          </h6>
-          <button ngbDropdownItem class="dropdown__link">Bags</button>
-          <button ngbDropdownItem class="dropdown__link">Jewellery</button>
-          <button ngbDropdownItem class="mb-3 dropdown__link">
-            Sunglasses
-          </button>
-        </div>
+          <div>
+            <h6 class="text-decoration-underline text-white fw-bold ms-3">
+              ACCESSORIES
+            </h6>
+            <button ngbDropdownItem class="dropdown__link">Bags</button>
+            <button ngbDropdownItem class="dropdown__link">Jewellery</button>
+            <button ngbDropdownItem class="mb-3 dropdown__link">
+              Sunglasses
+            </button>
+          </div>
+        </a>
       </div>
     </li>
 
     <li [ngbNavItem]="4">
-      <button ngbNavLink class="green__link fw-bold fs-5">BE INSPIRED</button>
+      <a href="/be-inspired">
+        <button ngbNavLink class="green__link fw-bold fs-5">BE INSPIRED</button>
+      </a>
     </li>
     <li [ngbNavItem]="5">
-      <button ngbNavLink class="orange__link fw-bold fs-5">DEVELOPERS</button>
+      <a href="/developers">
+        <button ngbNavLink class="orange__link fw-bold fs-5">DEVELOPERS</button>
+      </a>
     </li>
   </ul>
 

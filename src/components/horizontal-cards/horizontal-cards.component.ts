@@ -8,7 +8,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [CommonModule, MatIconModule],
   templateUrl: './horizontal-cards.component.html',
   styleUrls: ['./horizontal-cards.component.scss']
-})
+}) 
 export class HorizontalCardsComponent implements AfterViewInit {
   @ViewChild('scrl') scrl: ElementRef | undefined;
 

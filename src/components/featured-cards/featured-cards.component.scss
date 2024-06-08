@@ -1,0 +1,27 @@
+$purple: #a61ed3;
+$green: #0df733;
+$orange: #f27a2a;
+
+.card-color {
+    background-color: $purple;
+    width: 400px;
+}
+
+.card-img {
+    width: 400px;
+    clip-path: polygon(0 0, 100% 0, 100% 67%, 0% 100%);
+}
+
+button {
+    color: #fff;
+    background-color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    padding-left: 28px;
+    padding-right: 28px;
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
