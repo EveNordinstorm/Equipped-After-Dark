@@ -1,0 +1,30 @@
+$purple: #a61ed3;
+$green: #0df733;
+$orange: #f27a2a;
+
+button {
+    color: #fff;
+    background-color: $purple;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    padding-left: 28px;
+    padding-right: 28px;
+    &:hover {
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  .header-color {
+    background-color: $orange;
+  }
+
+  .title {
+    font-size: 3em;
+}
+
+  .line-header {
+    width: 25rem;
+    border-bottom: 4px solid #000;
+  }

@@ -2,3 +2,110 @@ $purple: #a61ed3;
 $green: #0df733;
 $orange: #f27a2a;
 
+button {
+    color: #fff;
+    background-color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    padding-left: 28px;
+    padding-right: 28px;
+    &:hover {
+      color: #000;
+      background-color: #fff;
+    }
+  }
+
+  .explore-btn {
+    background-color: $purple !important;
+    &:hover {
+        color: #fff !important;
+        background-color: #000 !important;
+      }
+  }
+
+.title {
+    font-size: 4em;
+}
+
+.line-header {
+    width: 25rem;
+    border-bottom: 4px solid #000;
+}
+
+.line-full {
+    border-bottom: 4px solid #000;
+}
+
+.new-in-line {
+    width: 10rem;
+    border-bottom: 4px solid #000;
+}
+
+.divider-line {
+    margin: auto;
+    width: 8rem;
+    border-bottom: 4px solid #000;
+}
+
+.product-line {
+    width: 4rem;
+    border-bottom: 4px solid #000;
+}
+
+.process-line {
+    width: 25rem;
+    border-bottom: 4px solid #fff;
+}
+
+.hand-designed-line {
+    height: 10rem;
+    border-left: 4px solid #000;
+}
+
+        .inspired-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
+
+        .purple-swatch {
+            width: 150px;
+            height: 150px;
+            background-color: $purple;
+        }
+        
+        .green-swatch {
+            width: 150px;
+            height: 150px;
+            background-color: $green;
+        }
+        
+        .orange-swatch {
+            width: 150px;
+            height: 150px;
+            background-color: $orange;
+        }
+
+        .gray-bg {
+            background-color: #DCDCDC;
+        }
+
+        .purple-stripe {
+            width: 65px;
+            height: 300px;
+            background-color: $purple;
+        }
+
+        .green-stripe {
+            width: 65px;
+            height: 300px;
+            background-color: $green;
+        }
+
+        .orange-stripe {
+            width: 65px;
+            height: 300px;
+            background-color: $orange;
+        }

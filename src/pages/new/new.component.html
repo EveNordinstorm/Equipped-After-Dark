@@ -1,1 +1,51 @@
-<p>new works!</p>
+<div class="d-flex justify-content-between mt-5">
+  <div ngbDropdown class="ms-5">
+    <button type="button" ngbDropdownToggle>Filter</button>
+    <ul ngbDropdownMenu class="dropdown-menu bg-black border-0 rounded-0">
+      <li>
+        <a class="filter-item green__link" ngbDropdownItem href="#"
+          >Lowest to Highest</a
+        >
+      </li>
+      <li>
+        <a class="filter-item green__link" ngbDropdownItem href="#"
+          >Highest to Lowest</a
+        >
+      </li>
+      <li>
+        <a class="filter-item green__link" ngbDropdownItem href="#"
+          >Most Recent</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <form class="d-flex me-5">
+    <input
+      class="form-control rounded-0 me-2"
+      type="search"
+      placeholder="Search Products"
+      aria-label="Search"
+    />
+
+    <button class="green__link px-3" type="submit">
+      <svg
+        href="#"
+        style="width: 25px; height: auto"
+        class=""
+        aria-hidden="true"
+        fill="currentColor"
+        viewBox="0 0 41.15 42.63"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clip-rule="evenodd"
+          fill-rule="evenodd"
+          d="m18.57,0c.49.08.99.15,1.48.25,5.87,1.1,10.24,4.3,12.71,9.72,2.92,6.4,2.06,12.49-2.21,18.09-.05.07-.1.13-.18.23.22.24.45.47.68.71,3.13,3.25,6.25,6.5,9.38,9.75.64.67.88,1.45.6,2.33-.26.83-.85,1.35-1.71,1.52-.85.17-1.55-.13-2.13-.75-2.02-2.1-4.04-4.2-6.06-6.3-1.35-1.4-2.69-2.8-4.03-4.18-.86.48-1.68.99-2.55,1.41-8.84,4.26-19.69.01-23.32-9.12C-2.12,15.17,1.55,5.68,9.73,1.71c1.83-.89,3.77-1.43,5.8-1.63.07,0,.14-.05.21-.08.94,0,1.89,0,2.83,0Zm-1.38,29.94c6.99.02,12.68-5.65,12.73-12.68.04-7.01-5.65-12.74-12.68-12.76-7.02-.02-12.73,5.67-12.75,12.7-.02,7.02,5.67,12.73,12.7,12.75Z"
+        ></path>
+      </svg>
+    </button>
+  </form>
+</div>
+
+<app-product-card></app-product-card>

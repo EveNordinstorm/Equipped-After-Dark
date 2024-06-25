@@ -1,0 +1,37 @@
+<div class="container my-5">
+  <div class="row gx-4 gy-2 justify-content-center">
+    <div
+      *ngFor="let product of products"
+      class="col-lg-4 mb-3 d-flex align-items-stretch"
+    >
+      <div class="card-color text-white h-100">
+        <img class="card-img-top" [src]="product.img" alt="Product image" />
+        <div class="card-body d-flex flex-column justify-content-between">
+          <div>
+            <h5 class="card-title text-end fs-3 fw-bold mb-1 me-3">
+              {{ product.title }}
+            </h5>
+            <p class="fs-4 text-end me-4">{{ product.price }}</p>
+          </div>
+          <div>
+            <button class="text-uppercase float-end mb-4 me-3">View</button>
+            <svg
+              style="width: 30px; height: auto"
+              class="text-white me-3 mt-1 float-end"
+              aria-hidden="true"
+              fill="currentColor"
+              viewBox="0 0 409.6 363.83"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                d="m409.6,109.36v27.15c-.47,1.42-1.19,2.82-1.37,4.28-2.89,22.32-11.71,42.29-23.97,60.93-13.91,21.16-30.85,39.81-49.65,56.56-37.38,33.28-75.32,65.94-113.16,98.71-10.9,9.44-22.86,9.02-34.22-.76-33.68-29.03-67.53-57.87-100.85-87.31-23.38-20.65-45.37-42.74-62.36-69.19-11.53-17.95-19.82-37.19-22.58-58.55-.21-1.59-.94-3.12-1.43-4.67,0-9.32,0-18.63,0-27.95.48-1.55,1.2-3.08,1.41-4.67,3.22-24.44,12.13-46.5,28.47-65.09C56.48,8.55,90.23-3.81,130.06,1.27c25.77,3.29,46.65,16.32,64.11,35.11,3.68,3.96,7.02,8.25,10.74,12.65,1.59-2,3.05-3.85,4.51-5.69,8.53-10.71,18.48-19.89,30.06-27.2,23.5-14.82,49.05-19.07,76.23-14.23,20.54,3.66,38.64,12.52,54.04,26.54,19.51,17.76,31.43,39.88,36.75,65.62,1.05,5.09,2.07,10.2,3.1,15.29Z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
