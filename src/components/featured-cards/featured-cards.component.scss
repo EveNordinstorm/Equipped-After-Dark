@@ -6,11 +6,16 @@ $orange: #f27a2a;
     background-color: $purple;
     width: 400px;
     height: 550px;
+    overflow: hidden;
 }
 
 .card-img {
     width: 400px;
     clip-path: polygon(0 0, 100% 0, 100% 67%, 0% 100%);
+}
+
+.card-img:hover {
+  transform: scale(1.1);
 }
 
 button {

@@ -1,1 +1,10 @@
-<p>product-expanded works!</p>
+<div *ngIf="product">
+  <h1>{{ product.title }}</h1>
+  <img [src]="product.img" alt="{{ product.title }}" />
+  <p>Price: {{ product.price | currency }}</p>
+  <p>{{ product.description }}</p>
+  <p *ngIf="product.sizes">Available Sizes: {{ product.sizes.join(", ") }}</p>
+  <p *ngIf="product.stock !== undefined">In Stock: {{ product.stock }}</p>
+  <button>Add to Cart</button>
+  <button>Favorite</button>
+</div>

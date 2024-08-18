@@ -48,4 +48,7 @@
   </form>
 </div>
 
-<app-product-card></app-product-card>
+<app-product-card
+  *ngFor="let product of products"
+  [product]="product"
+></app-product-card>

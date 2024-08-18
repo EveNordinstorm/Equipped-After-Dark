@@ -1,61 +1,20 @@
-// $purple: #a61ed3;
-// $green: #0df733;
-// $orange: #f27a2a;
-
-// .card-color {
-//   background-color: $purple;
-//   width: 100%;
-//   max-width: 350px; // Ensure it doesn't exceed the specified width
-//   height: 500px;
-//   margin: 0 auto; // Center the card horizontally
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center; // Center align items
-//   justify-content: space-between; // Space between items to ensure proper spacing
-// }
-
-// .card-img {
-//   width: 100%;
-//   max-width: 350px;
-//   clip-path: polygon(0 0, 100% 0, 100% 67%, 0% 100%);
-// }
-
-// .card-body {
-//   width: 100%; // Ensure card body takes full width
-// }
-
-// button {
-//   color: #fff;
-//   background-color: #000;
-//   font-size: 24px;
-//   font-weight: bold;
-//   border: none;
-//   padding-left: 28px;
-//   padding-right: 28px;
-//   &:hover {
-//     color: #000;
-//     background-color: #fff;
-//   }
-// }
-
-// svg:hover {
-//   color: #{$green} !important;
-//   cursor: pointer;
-// }
-
 $purple: #a61ed3;
 $green: #0df733;
 $orange: #f27a2a;
 
 .card-color {
   background-color: $purple;
-  // max-width: 375px;
   width: 100%;
+  overflow: hidden;
 }
 
-.card-img-top {
+.card-img {
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 67%, 0% 100%);
+}
+
+.card-img:hover {
+  transform: scale(1.1);
 }
 
 button {

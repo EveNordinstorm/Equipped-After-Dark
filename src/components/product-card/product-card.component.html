@@ -5,16 +5,21 @@
       class="col-lg-4 mb-3 d-flex align-items-stretch"
     >
       <div class="card-color text-white h-100">
-        <img class="card-img-top" [src]="product.img" alt="Product image" />
+        <img class="card-img" [src]="product.img" alt="Product image" />
         <div class="card-body d-flex flex-column justify-content-between">
           <div>
             <h5 class="card-title text-end fs-3 fw-bold mb-1 me-3">
               {{ product.title }}
             </h5>
-            <p class="fs-4 text-end me-4">{{ product.price }}</p>
+            <p class="fs-4 text-end me-4">{{ product.price | currency }}</p>
           </div>
           <div>
-            <button class="text-uppercase float-end mb-4 me-3">View</button>
+            <button
+              [routerLink]="['/product', product.id]"
+              class="text-uppercase float-end mb-4 me-3"
+            >
+              View
+            </button>
             <svg
               style="width: 30px; height: auto"
               class="text-white me-3 mt-1 float-end"
