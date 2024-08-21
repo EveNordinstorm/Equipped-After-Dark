@@ -48,7 +48,13 @@
   </form>
 </div>
 
-<app-product-card
-  *ngFor="let product of products"
-  [product]="product"
-></app-product-card>
+<div class="container my-5">
+  <div class="row gx-4 gy-2 justify-content-center">
+    <div
+      class="col-lg-4 mb-3 d-flex align-items-stretch"
+      *ngFor="let product of products"
+    >
+      <app-product-card [product]="product"></app-product-card>
+    </div>
+  </div>
+</div>

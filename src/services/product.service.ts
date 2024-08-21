@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product.model';
 
@@ -7,15 +7,21 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:27017/api/products';
+  private apiUrl = 'http://localhost:5000/api/products';
 
   constructor(private http: HttpClient) {}
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiUrl);
-  }
+  getProducts(category: string, sort?: string, type?: string): Observable<Product[]> {
+    let params = new HttpParams().set('category', category);
 
-  getProductById(id: string): Observable<Product> {
-    return this.http.get<Product>(`${this.apiUrl}/${id}`);
+    if (sort) {
+      params = params.set('sort', sort);
+    }
+
+    if (type) {
+      params = params.set('type', type);
+    }
+
+    return this.http.get<Product[]>(this.apiUrl, { params });
   }
 }
