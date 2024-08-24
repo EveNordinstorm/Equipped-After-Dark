@@ -3,7 +3,7 @@
 >
   <!-- Logo -->
   <div class="my-2">
-    <a class="navbar-brand" routerLink="/">
+    <a class="navbar-brand" (click)="navigateTo('/')">
       <img
         src="/assets/EAD Logo text white crop.png"
         alt="logo"
@@ -17,7 +17,11 @@
   <div id="navbarMenu">
     <ul ngbNav #nav="ngbNav" [activeId]="2" class="justify-content-center">
       <li [ngbNavItem]="1">
-        <button ngbNavLink routerLink="/new" class="green__link fw-bold fs-5">
+        <button
+          ngbNavLink
+          (click)="navigateTo('/new')"
+          class="green__link fw-bold fs-5"
+        >
           NEW
         </button>
       </li>
@@ -34,7 +38,7 @@
         <div ngbDropdownMenu class="bg-black rounded-0 flex">
           <button
             ngbDropdownItem
-            routerLink="/products-women"
+            (click)="navigateTo('/products-women')"
             class="dropdown__link mb-3 fw-bold"
           >
             Browse All
@@ -46,7 +50,7 @@
             </h6>
             <button
               ngbDropdownItem
-              routerLink="/new"
+              (click)="navigateTo('/new')"
               class="dropdown__link mb-3"
             >
               The Latest Collection
@@ -127,7 +131,7 @@
         <div ngbDropdownMenu class="bg-black rounded-0 flex">
           <button
             ngbDropdownItem
-            routerLink="/products-men"
+            (click)="navigateTo('/products-men')"
             class="dropdown__link mb-3 fw-bold"
           >
             Browse All
@@ -139,7 +143,7 @@
             </h6>
             <button
               ngbDropdownItem
-              routerLink="/new"
+              (click)="navigateTo('/new')"
               class="dropdown__link mb-3"
             >
               The Latest Collection
@@ -211,7 +215,7 @@
       <li [ngbNavItem]="4">
         <button
           ngbNavLink
-          routerLink="/be-inspired"
+          (click)="navigateTo('/be-inspired')"
           class="green__link fw-bold fs-5"
         >
           BE INSPIRED
@@ -220,7 +224,7 @@
       <li [ngbNavItem]="5">
         <button
           ngbNavLink
-          routerLink="/developers"
+          (click)="navigateTo('/developers')"
           class="orange__link fw-bold fs-5"
         >
           DEVELOPERS
@@ -233,7 +237,7 @@
   <div class="d-none d-lg-flex">
     <ul class="d-flex list-unstyled mb-0">
       <li>
-        <a routerLink="/new" class="text-white">
+        <a href="/search" class="text-white">
           <svg
             style="width: 30px; height: auto"
             class="text-white mx-2"
@@ -251,7 +255,7 @@
         </a>
       </li>
       <li>
-        <a routerLink="/profile" class="text-white">
+        <a href="/account" class="text-white">
           <svg
             style="width: 30px; height: auto"
             class="text-white mx-2"
@@ -273,7 +277,7 @@
         </a>
       </li>
       <li>
-        <a routerLink="/wishlist" class="text-white">
+        <a href="/wishlist" class="text-white">
           <svg
             style="width: 30px; height: auto"
             class="text-white mx-2"
@@ -291,7 +295,7 @@
         </a>
       </li>
       <li>
-        <a routerLink="/cart" class="text-white">
+        <a href="/cart" class="text-white">
           <svg
             style="width: 30px; height: auto"
             class="text-white mx-2"
@@ -360,7 +364,7 @@
       <li class="bg-black p-2">
         <a
           ngbDropdownItem
-          routerLink="/search"
+          href="/search"
           class="d-flex justify-content-between align-items-center text-white my-1 dropdown__link"
         >
           <span class="mx-2 fw-bold">Search</span>
@@ -384,10 +388,10 @@
       <li class="bg-black p-2">
         <a
           ngbDropdownItem
-          routerLink="/profile"
+          href="/account"
           class="d-flex justify-content-between align-items-center text-white my-1 dropdown__link"
         >
-          <span class="mx-2 fw-bold">Profile</span>
+          <span class="mx-2 fw-bold">Account</span>
           <svg
             style="width: 30px; height: auto"
             class="text-white mx-2"
@@ -412,7 +416,7 @@
       <li class="bg-black p-2">
         <a
           ngbDropdownItem
-          routerLink="/wishlist"
+          href="/wishlist"
           class="d-flex justify-content-between align-items-center text-white my-1 dropdown__link"
         >
           <span class="mx-2 fw-bold">Wishlist</span>
@@ -436,7 +440,7 @@
       <li class="bg-black p-2">
         <a
           ngbDropdownItem
-          routerLink="/cart"
+          href="/cart"
           class="d-flex justify-content-between align-items-center text-white my-1 dropdown__link"
         >
           <span class="mx-2 fw-bold">Cart</span>

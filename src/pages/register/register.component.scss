@@ -1,0 +1,17 @@
+$purple: #a61ed3;
+$green: #0df733;
+$orange: #f27a2a;
+
+.background {
+    background-color: $green;
+}
+
+button {
+    color: #fff;
+    background-color: #000;
+    font-size: 22px;
+    border: none;
+    &:hover {
+      background-color: $purple;
+    }
+  }

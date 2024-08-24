@@ -11,12 +11,15 @@ import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NavBarComponent {
 	selectedType: string = '';
-
-  constructor(private router: Router) {}
-
-  onTypeFilterChange(category: string, type: string): void {
-    this.selectedType = type;
-    
-    this.router.navigate(['/products-' + category], { queryParams: { type: this.selectedType } });
+  
+	constructor(private router: Router) {}
+  
+	navigateTo(path: string): void {
+	  this.router.navigate([path]);
+	}
+  
+	onTypeFilterChange(category: string, type: string): void {
+	  this.selectedType = type;
+	  this.router.navigate(['/products-' + category], { queryParams: { type: this.selectedType } });
+	}
   }
-}

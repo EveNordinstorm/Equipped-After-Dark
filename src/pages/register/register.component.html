@@ -1,0 +1,44 @@
+<div class="background d-flex justify-content-center py-5">
+  <form class="container px-lg-5" (ngSubmit)="register()">
+    <div class="form-group mb-3">
+      <label class="text-black fs-3" for="registerInputEmail"
+        >Email Address</label
+      >
+      <input
+        type="email"
+        class="form-control rounded-0"
+        id="registerInputEmail"
+        [(ngModel)]="username"
+        name="username"
+        aria-describedby="emailHelp"
+        placeholder="Enter email"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label class="text-black fs-3" for="registerInputPassword"
+        >Password</label
+      >
+      <input
+        type="password"
+        class="form-control rounded-0"
+        id="registerInputPassword"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group form-check mb-3">
+      <input type="checkbox" class="form-check-input" id="mailingList" />
+      <label class="form-check-label text-black fw-bold" for="mailingList"
+        >Sign up to our mailing list for 10% off your first order!</label
+      >
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="px-3" type="submit">Create Account</button>
+    </div>
+  </form>
+</div>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>

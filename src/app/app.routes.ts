@@ -2,8 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 
 import { HomeComponent } from '../pages/home/home.component';
+import { AccountComponent } from '../pages/account/account.component';
+import { RegisterComponent } from '../pages/register/register.component';
+import { LoginComponent } from '../pages/login/login.component';
 import { NewComponent } from '../pages/new/new.component';
 import { BeInspiredComponent } from '../pages/be-inspired/be-inspired.component';
 import { DevelopersComponent } from '../pages/developers/developers.component';
@@ -18,6 +22,9 @@ import { ProductExpandedComponent } from '../components/product-expanded/product
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'account', component: AccountComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'login', component: LoginComponent },
   { path: 'new', component: NewComponent },
   { path: 'be-inspired', component: BeInspiredComponent },
   { path: 'developers', component: DevelopersComponent },
