@@ -7,5 +7,6 @@ export interface Product {
     description?: string;
     sizes?: string[];
     stock: { size: string, stock: number }[];
+    type: string;
   }
   

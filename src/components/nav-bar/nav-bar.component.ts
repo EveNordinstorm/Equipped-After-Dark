@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -6,6 +7,16 @@ import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 	standalone: true,
 	imports: [NgbNavModule, NgbDropdownModule],
 	templateUrl: './nav-bar.component.html',
-  	styleUrl: './nav-bar.component.scss'
+  	styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {}
+export class NavBarComponent {
+	selectedType: string = '';
+
+  constructor(private router: Router) {}
+
+  onTypeFilterChange(category: string, type: string): void {
+    this.selectedType = type;
+    
+    this.router.navigate(['/products-' + category], { queryParams: { type: this.selectedType } });
+  }
+}

@@ -11,17 +11,31 @@ export class ProductService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(category: string, sort?: string, type?: string): Observable<Product[]> {
-    let params = new HttpParams().set('category', category);
+  // Get all products with optional filtering
+  getProducts(category?: string, sort?: string, type?: string, search?: string): Observable<Product[]> {
+    let params = new HttpParams();
 
-    if (sort) {
-      params = params.set('sort', sort);
+    if (category) {
+        params = params.set('category', category);
     }
-
+    if (sort) {
+        params = params.set('sort', sort);
+    }
     if (type) {
       params = params.set('type', type);
     }
+    if (search) {
+        params = params.set('search', search);
+    }
+
+    console.log('HTTP Params:', params.toString());
 
     return this.http.get<Product[]>(this.apiUrl, { params });
+  }
+
+  // Get single product by ID
+  getProductById(id: string): Observable<Product> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Product>(url);
   }
 }

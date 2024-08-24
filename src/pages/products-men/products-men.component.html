@@ -3,25 +3,27 @@
     <button type="button" ngbDropdownToggle>Filter</button>
     <ul ngbDropdownMenu class="dropdown-menu bg-black border-0 rounded-0">
       <li>
-        <a class="filter-item green__link" ngbDropdownItem href="#"
+        <a
+          class="filter-item green__link"
+          ngbDropdownItem
+          (click)="sortProducts('low-to-high')"
           >Lowest to Highest</a
         >
       </li>
       <li>
-        <a class="filter-item green__link" ngbDropdownItem href="#"
+        <a
+          class="filter-item green__link"
+          ngbDropdownItem
+          (click)="sortProducts('high-to-low')"
           >Highest to Lowest</a
-        >
-      </li>
-      <li>
-        <a class="filter-item green__link" ngbDropdownItem href="#"
-          >Most Recent</a
         >
       </li>
     </ul>
   </div>
 
-  <form class="d-flex me-5">
+  <form class="d-flex me-5" (submit)="onSearch($event, searchInput.value)">
     <input
+      #searchInput
       class="form-control rounded-0 me-2"
       type="search"
       placeholder="Search Products"
@@ -30,9 +32,7 @@
 
     <button class="green__link px-3" type="submit">
       <svg
-        href="#"
         style="width: 25px; height: auto"
-        class=""
         aria-hidden="true"
         fill="currentColor"
         viewBox="0 0 41.15 42.63"

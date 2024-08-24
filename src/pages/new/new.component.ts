@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product.model';
@@ -16,18 +17,25 @@ import { ProductCardComponent } from '../../components/product-card/product-card
 export class NewComponent implements OnInit {
   products: Product[] = [];
   selectedSort: string = '';
-  selectedType: string = '';
+  selectedCategory: string = 'new';
+  searchTerm: string = '';
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.fetchProducts();
+    this.route.queryParams.subscribe((params) => {
+      this.selectedCategory = params['category'] || this.selectedCategory;
+      this.searchTerm = params['search'] || '';
+      this.fetchProducts();
+    });
   }
 
   fetchProducts(): void {
-    const category = 'new';
-
-    this.productService.getProducts(category, this.selectedSort, this.selectedType).subscribe(
+    this.productService.getProducts(this.selectedCategory, this.selectedSort, this.searchTerm).subscribe(
       (data: Product[]) => {
         this.products = data;
       },
@@ -37,13 +45,20 @@ export class NewComponent implements OnInit {
     );
   }
 
-  onSortChange(sortOption: string): void {
-    this.selectedSort = sortOption;
+  sortProducts(order: string): void {
+    this.selectedSort = order;
     this.fetchProducts();
   }
 
-  onTypeFilterChange(type: string): void {
-    this.selectedType = type;
+  onSearch(event: Event, searchTerm: string): void {
+    event.preventDefault();
+    this.searchTerm = searchTerm.trim();
+    this.router.navigate(['/new'], { 
+      queryParams: { 
+        category: this.selectedCategory, 
+        search: this.searchTerm 
+      } 
+    });
     this.fetchProducts();
   }
 }
