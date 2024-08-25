@@ -2,8 +2,12 @@ $purple: #a61ed3;
 $green: #0df733;
 $orange: #f27a2a;
 
-svg {
-    color: $purple !important;
+svg.text-green {
+  color: $green !important;
+}
+
+svg.text-purple {
+  color: $purple !important;
 }
 
 svg:hover {

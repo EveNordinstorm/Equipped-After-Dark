@@ -10,6 +10,10 @@
         {{ product.title }}
       </h5>
       <p class="fs-4 text-end me-4">{{ product.price | currency : "GBP" }}</p>
+      <p *ngIf="size" class="fs-5 text-end me-4">Size: {{ size }}</p>
+      <p *ngIf="quantity" class="fs-5 text-end me-4">
+        Quantity: {{ quantity }}
+      </p>
     </div>
     <div>
       <button
@@ -19,6 +23,11 @@
         View
       </button>
       <svg
+        (click)="toggleWishlist(product)"
+        [ngClass]="{
+          'text-green': isInWishlist(product._id),
+          'text-white': !isInWishlist(product._id)
+        }"
         style="width: 30px; height: auto"
         class="text-white me-3 mt-1 float-end"
         aria-hidden="true"

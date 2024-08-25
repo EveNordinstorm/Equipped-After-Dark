@@ -31,6 +31,14 @@ button {
   }
 }
 
+svg.text-green {
+  color: $green !important;
+}
+
+svg.text-white {
+  color: white !important;
+}
+
 svg:hover {
   color: $green !important;
   cursor: pointer;

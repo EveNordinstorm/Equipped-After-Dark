@@ -1,1 +1,18 @@
-<p>wishlist works!</p>
+<div class="container my-5">
+  <h2 class="mb-4 fs-2">Your Wishlist</h2>
+
+  <div *ngIf="wishlistItems.length > 0; else emptyWishlist">
+    <div class="row gx-4 gy-2 justify-content-center">
+      <div
+        class="col-lg-4 d-flex align-items-stretch mb-3"
+        *ngFor="let item of wishlistItems"
+      >
+        <app-product-card [product]="item"></app-product-card>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyWishlist>
+    <p class="fs-4">No items added to wishlist.</p>
+  </ng-template>
+</div>

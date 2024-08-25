@@ -31,19 +31,27 @@ export class SearchComponent implements OnInit {
     this.route.queryParams.subscribe((params) => {
       this.searchTerm = params['search'] || '';
       this.selectedSort = params['sort'] || '';
-      this.fetchProducts();
+      if (this.searchTerm) {
+        this.fetchProducts();
+      } else {
+        this.products = [];
+      }
     });
   }
 
   fetchProducts(): void {
-    this.productService.getProducts('', this.selectedSort, '').subscribe(
-      (data: Product[]) => {
-        this.products = data;
-      },
-      (error) => {
-        console.error('Error fetching products:', error);
-      }
-    );
+    if (this.searchTerm) {
+      this.productService.getProducts(this.searchTerm, this.selectedSort, '').subscribe(
+        (data: Product[]) => {
+          this.products = data;
+        },
+        (error) => {
+          console.error('Error fetching products:', error);
+        }
+      );
+    } else {
+      this.products = [];
+    }
   }
 
   sortProducts(order: string): void {
@@ -54,17 +62,19 @@ export class SearchComponent implements OnInit {
   onSearch(event: Event, searchTerm: string): void {
     event.preventDefault();
     this.searchTerm = searchTerm.trim();
-
-    console.log('Search Term:', this.searchTerm);
-
-    this.router.navigate(['/products-search'], { 
-      queryParams: { 
-        search: this.searchTerm, 
-        sort: this.selectedSort
-      } 
-    });
-    this.ngZone.run(() => {
-      this.fetchProducts();
-    });
+  
+    if (this.searchTerm) {
+      this.router.navigate(['/products-search'], { 
+        queryParams: { 
+          search: this.searchTerm, 
+          sort: this.selectedSort
+        } 
+      });
+      this.ngZone.run(() => {
+        this.fetchProducts();
+      });
+    } else {
+      this.products = [];
+    }
   }
 }

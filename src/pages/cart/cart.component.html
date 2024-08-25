@@ -1,1 +1,31 @@
-<p>cart works!</p>
+<div class="container my-5">
+  <h2 class="mb-4 fs-2">Your Cart</h2>
+
+  <div *ngIf="cartItems.length > 0; else emptyCart">
+    <div class="row gx-4 gy-2 justify-content-center">
+      <div
+        class="col-lg-4 d-flex align-items-stretch mb-5 pb-5"
+        *ngFor="let item of cartItems"
+      >
+        <div>
+          <app-product-card
+            [product]="item.product"
+            [size]="item.size"
+            [quantity]="item.quantity"
+          ></app-product-card>
+
+          <button
+            class="btn btn-danger rounded-0 mt-2 w-100 fs-4"
+            (click)="removeFromCart(item.product._id, item.size)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #emptyCart>
+    <p>No items added to cart.</p>
+  </ng-template>
+</div>

@@ -6,7 +6,12 @@ export interface Product {
     category: string;
     description?: string;
     sizes?: string[];
-    stock: { size: string, stock: number }[];
+    stockLevels: { size: string, stock: number }[];
     type: string;
+  }
+
+  export interface Size {
+    size: string;
+    stockLevels: number;
   }
   
