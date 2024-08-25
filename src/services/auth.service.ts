@@ -28,5 +28,18 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
+  }
+
+  saveUserData(username: string): void {
+    localStorage.setItem('username', username);
+  }
+
+  getUsername(): string | null {
+    return localStorage.getItem('username');
+  }
+
+  isLoggedIn(): boolean {
+    return !!this.getToken();
   }
 }

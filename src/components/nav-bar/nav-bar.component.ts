@@ -22,4 +22,13 @@ export class NavBarComponent {
 	  this.selectedType = type;
 	  this.router.navigate(['/products-' + category], { queryParams: { type: this.selectedType } });
 	}
+
+	navigateToAccountOrProfile(): void {
+		const token = localStorage.getItem('token');
+		if (token) {
+		  this.router.navigate(['/profile']);
+		} else {
+		  this.router.navigate(['/account']);
+		}
+	  }
   }

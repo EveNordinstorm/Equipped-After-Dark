@@ -21,8 +21,15 @@ export class RegisterComponent {
   register(): void {
     this.errorMessage = '';
     this.authService.register(this.username, this.password).subscribe(
-      () => {
-        this.router.navigate(['/']);
+      (response: any) => {
+        console.log('Response:', response);
+        if (response.token) {
+          this.authService.saveToken(response.token);
+          this.authService.saveUserData(this.username);
+          this.router.navigate(['/']);
+        } else {
+          this.errorMessage = 'Registration successful, but no token received.';
+        }
       },
       (error) => {
         this.handleError(error);

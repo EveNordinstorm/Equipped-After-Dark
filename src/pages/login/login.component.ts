@@ -22,8 +22,11 @@ export class LoginComponent {
     this.errorMessage = '';
     this.authService.login(this.username, this.password).subscribe(
       (response: any) => {
-        this.authService.saveToken(response.token);
-        this.router.navigate(['/']);
+        if (response.token) {
+          this.authService.saveToken(response.token);
+          this.authService.saveUserData(this.username);
+          this.router.navigate(['/']);
+        }
       },
       (error) => {
         this.handleError(error);

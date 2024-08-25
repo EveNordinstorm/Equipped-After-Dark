@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth.guard';
 
 import { HomeComponent } from '../pages/home/home.component';
 import { AccountComponent } from '../pages/account/account.component';
