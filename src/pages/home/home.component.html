@@ -26,10 +26,10 @@
       </p>
     </div>
 
-    <div class="m-4">
-      <div class="purple-swatch my-3"></div>
-      <div class="green-swatch my-3"></div>
-      <div class="orange-swatch my-3"></div>
+    <div class="m-4 d-sm-flex d-lg-block">
+      <div class="purple-swatch m-3"></div>
+      <div class="green-swatch m-3"></div>
+      <div class="orange-swatch m-3"></div>
     </div>
   </div>
 </section>
@@ -39,28 +39,42 @@
   <h2 class="text-center text-uppercase fs-1 pt-2">Choose to be Equipped</h2>
   <div class="line-2"></div>
   <img
-    class="equipped-img mt-5"
+    class="equipped-img w-75 mt-5"
     src="/assets/choose-to-be-equipped.jpg"
     alt="models standing in front of car"
   />
 
   <div class="d-flex justify-content-center container">
-    <div class="about-products d-sm-block d-lg-flex my-5">
-      <div>
-        <p>
+    <div class="about-products row my-5">
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center align-items-lg-start align-items-center px-5"
+      >
+        <p class="text-lg-start text-center">
           Our products are made with urban night life in mind. Be prepared for
           the weather with quality materials that are waterproof and highly
           reflective. Inspired by tech-wear, our design focus is on
-          practicality, safety and most of all, looking good while doing it.
+          practicality, safety, and most of all, looking good while doing it.
         </p>
-        <div class="btn-group-vertical">
-          <button class="store-btn text-uppercase">Store</button>
-          <button class="more-btn text-uppercase">More</button>
+        <div class="btn-group-vertical text-center text-lg-start">
+          <button
+            (click)="navigateTo('/new')"
+            class="store-btn text-uppercase mb-2 mt-0 mt-lg-5"
+          >
+            Store
+          </button>
+          <button
+            (click)="navigateTo('/be-inspired')"
+            class="more-btn text-uppercase"
+          >
+            More
+          </button>
         </div>
       </div>
-      <div>
+      <div
+        class="col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-start"
+      >
         <img
-          class="home-products-img"
+          class="product-image img-fluid"
           src="/assets/pexels-cottonbro-studio-10378660.jpg"
           alt="woman looking over city"
         />
@@ -70,26 +84,36 @@
 </section>
 
 <section>
-  <div class="be-inspired p-5">
+  <div class="be-inspired p-5 text-lg-start">
     <h2 class="text-uppercase fs-1 pt-4">Get Inspired</h2>
     <div class="line-3"></div>
-    <button class="show-me-btn text-uppercase mt-5">Show Me</button>
-    <img
-      class="apparel-img float-end me-5 pt-5"
-      src="/assets/apparel-img.jpg"
-      alt="After Dark Apparel"
-    />
+    <button
+      (click)="navigateTo('/be-inspired')"
+      class="show-me-btn text-uppercase mt-5"
+    >
+      Show Me
+    </button>
+
+    <div class="d-flex justify-content-center justify-content-lg-end">
+      <img
+        class="apparel-img img-fluid pt-5"
+        src="/assets/apparel-img.jpg"
+        alt="After Dark Apparel"
+      />
+    </div>
   </div>
 </section>
 
-<video width="100%" autoplay muted>
+<video width="100%" autoplay muted class="video-section">
   <source src="/assets/home-video.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 
 <div class="email-bg p-5">
-  <h3 class="text-uppercase fs-1">Want to recieve exclusive emails?</h3>
-  <p class="fs-4">
+  <h3 class="text-uppercase text-black fs-1">
+    Want to receive exclusive emails?
+  </h3>
+  <p class="fs-4 text-black">
     Sign up to our newsletter to receive 10% off your first order, access to
     exclusive sales and previews of our new items.
   </p>
@@ -104,7 +128,9 @@
       />
     </div>
   </div>
-  <button type="submit" class="sign-up-btn text-uppercase float-end my-4">
-    Sign Up
-  </button>
+  <div class="d-flex justify-content-end">
+    <button type="submit" class="sign-up-btn text-uppercase my-4">
+      Sign Up
+    </button>
+  </div>
 </div>

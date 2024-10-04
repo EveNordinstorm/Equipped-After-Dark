@@ -8,7 +8,7 @@ $orange: #f27a2a;
     }
 
 .line-1 {
-    height: 150px;
+    height: 200px;
     border-left: 4px solid #000;
 }
 
@@ -47,16 +47,46 @@ $orange: #f27a2a;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+.product-image {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+  
+    @media (min-width: 992px) {
+      margin-right: 0;
+    }
+  
+    @media (max-width: 768px) {
+      width: 50%;
+      margin-top: 10px;
+    }
+  
+    @media (max-width: 576px) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .apparel-img {
     width: 60%;
-}
-
-.home-products-img {
-    width: 30%;
-}
-
-.apparel-img {
-    width: 40%;
-}
+    max-width: 500px;
+    height: auto;
+  
+    @media (min-width: 992px) {
+      width: 40%;
+      float: none;
+      margin-right: 0;
+    }
+  
+    @media (max-width: 768px) {
+      width: 70%;
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+  }
 
 button {
     font-size: 24px;
@@ -105,11 +135,18 @@ button {
 
 .be-inspired {
     background-color: #DCDCDC;
-    height: 1000px;
 }
 
 .email-bg {
     background-color: $green;
+    padding-bottom: 50px;
+  position: relative;
+  margin-top: -4px;
+}
+
+.video-section {
+  display: block;
+  margin-bottom: 0;
 }
 
 .sign-up {
@@ -120,6 +157,13 @@ button {
     border-top: none;
     border-left: none;
     border-right: none;
+}
+
+.sign-up-btn {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  position: relative;
 }
 
 ::placeholder {

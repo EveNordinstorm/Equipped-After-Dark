@@ -53,59 +53,93 @@ button {
     border-bottom: 4px solid #000;
 }
 
-.process-line {
-    width: 25rem;
-    border-bottom: 4px solid #fff;
-}
-
 .hand-designed-line {
     height: 10rem;
     border-left: 4px solid #000;
 }
 
-        .inspired-img {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
+.inspired-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
-        .purple-swatch {
-            width: 150px;
-            height: 150px;
-            background-color: $purple;
-        }
-        
-        .green-swatch {
-            width: 150px;
-            height: 150px;
-            background-color: $green;
-        }
-        
-        .orange-swatch {
-            width: 150px;
-            height: 150px;
-            background-color: $orange;
-        }
+.purple-swatch {
+    width: 150px;
+    height: 150px;
+    background-color: $purple;
+}
 
-        .gray-bg {
-            background-color: #DCDCDC;
-        }
+.green-swatch {
+    width: 150px;
+    height: 150px;
+    background-color: $green;
+}
 
-        .purple-stripe {
-            width: 65px;
-            height: 300px;
-            background-color: $purple;
-        }
+.orange-swatch {
+    width: 150px;
+    height: 150px;
+    background-color: $orange;
+}
 
-        .green-stripe {
-            width: 65px;
-            height: 300px;
-            background-color: $green;
-        }
+.gray-bg {
+    background-color: #DCDCDC;
+}
 
-        .orange-stripe {
-            width: 65px;
-            height: 300px;
-            background-color: $orange;
-        }
+.bg-black {
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    min-height: 100px;
+  }
+  
+  .stripes-container {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+  
+  .purple-stripe,
+  .green-stripe,
+  .orange-stripe {
+    width: 65px;
+    background-color: transparent;
+  }
+  
+  .purple-stripe {
+    background-color: $purple;
+  }
+  
+  .green-stripe {
+    background-color: $green;
+  }
+  
+  .orange-stripe {
+    background-color: $orange;
+  }
+  
+  .process-line {
+    width: 25rem;
+    border-bottom: 4px solid #fff;
+  }
+  
+  @media (max-width: 991px) {
+    .text-section {
+      margin-left: 0;
+    }
+  
+    .process-line {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .process-line {
+      width: 100%;
+    }
+  }
+  
+   
+  

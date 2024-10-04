@@ -9,7 +9,6 @@ import { RegisterComponent } from '../pages/register/register.component';
 import { LoginComponent } from '../pages/login/login.component';
 import { NewComponent } from '../pages/new/new.component';
 import { BeInspiredComponent } from '../pages/be-inspired/be-inspired.component';
-import { DevelopersComponent } from '../pages/developers/developers.component';
 import { SearchComponent } from '../pages/search/search.component';
 import { ProfileComponent } from '../pages/profile/profile.component';
 import { WishlistComponent } from '../pages/wishlist/wishlist.component';
@@ -26,7 +25,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'new', component: NewComponent },
   { path: 'be-inspired', component: BeInspiredComponent },
-  { path: 'developers', component: DevelopersComponent },
   { path: 'search', component: SearchComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'wishlist', component: WishlistComponent },

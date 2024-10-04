@@ -12,20 +12,21 @@ export class ProductService {
   constructor(private http: HttpClient) {}
 
   // Get all products with optional filtering
-  getProducts(category?: string, sort?: string, type?: string, search?: string): Observable<Product[]> {
+  getProducts(category?: string, sort?: string, type?: string, search?: string, includeAll: boolean = false): Observable<Product[]> {
     let params = new HttpParams();
 
-    if (category) {
-        params = params.set('category', category);
+    // If includeAll is true, we won't set the category in the params
+    if (!includeAll && category) {
+      params = params.set('category', category);
     }
     if (sort) {
-        params = params.set('sort', sort);
+      params = params.set('sort', sort);
     }
     if (type) {
       params = params.set('type', type);
     }
     if (search) {
-        params = params.set('search', search);
+      params = params.set('search', search);
     }
 
     console.log('HTTP Params:', params.toString());

@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -55,4 +56,10 @@ export class HorizontalCardsComponent implements AfterViewInit {
       }
     }
   }
+
+  constructor(private router: Router) {}
+  
+	navigateTo(path: string): void {
+	  this.router.navigate([path]);
+	}
 }

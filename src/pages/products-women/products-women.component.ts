@@ -39,7 +39,7 @@ export class ProductsWomenComponent implements OnInit {
   }
 
   fetchProducts(): void {
-    this.productService.getProducts(this.selectedCategory, this.selectedSort, this.selectedType).subscribe(
+    this.productService.getProducts(this.selectedCategory, this.selectedSort, this.selectedType, this.searchTerm).subscribe(
       (data: Product[]) => {
         this.products = data;
       },
