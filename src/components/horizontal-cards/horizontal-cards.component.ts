@@ -14,11 +14,11 @@ export class HorizontalCardsComponent implements AfterViewInit {
   @ViewChild('scrl') scrl: ElementRef | undefined;
 
   cards = [
-    { img: '/assets/horizontal-cards-01.jpg', title: 'Women' },
-    { img: '/assets/horizontal-cards-02.jpg', title: 'Men' },
-    { img: '/assets/horizontal-cards-03.jpg', title: 'New' },
-    { img: '/assets/horizontal-cards-04.jpg', title: 'Sale' },
-    { img: '/assets/horizontal-cards-05.jpg', title: 'Inspiration' }
+    { img: 'assets/horizontal-cards-01.jpg', title: 'Women' },
+    { img: 'assets/horizontal-cards-02.jpg', title: 'Men' },
+    { img: 'assets/horizontal-cards-03.jpg', title: 'New' },
+    { img: 'assets/horizontal-cards-04.jpg', title: 'Sale' },
+    { img: 'assets/horizontal-cards-05.jpg', title: 'Inspiration' }
   ];
 
   cardWidth = 300;

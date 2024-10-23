@@ -7,7 +7,7 @@ import { Product } from '../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
-  private apiUrl = 'http://localhost:5000/api/products';
+  private apiUrl = 'https://equippedafterdark.azurewebsites.net/api/products';
 
   constructor(private http: HttpClient) {}
 
